@@ -44,3 +44,35 @@ No direct support contact. For issues, open a GitHub issue in this repository.
 ---
 
 Do not include personal credentials or environment secrets in this repository.
+
+## Installation and Usage Guide
+
+### 1. Installing the Extension from a .vsix File
+- Open VS Code.
+- Go to the Extensions view (`Ctrl+Shift+X`).
+- Click the “...” (More Actions) menu in the top-right, then select **Install from VSIX...**
+- Select the downloaded `udit-agent-0.0.1.vsix` file.
+- Reload VS Code if prompted.
+
+### 2. Invoking the Extension
+- Open the Copilot Chat panel (View → Copilot Chat, or search “Copilot Chat” in the Command Palette).
+- In the chat input, type `@repo-manager` to activate the repo manager skill.
+
+### 3. Using @repo-manager
+You can ask things like:
+- `@repo-manager generate a README for this project`
+- `@repo-manager show me the git status`
+- `@repo-manager pull the latest changes`
+- `@repo-manager help`
+
+### 4. Adding a Custom README Template
+- Place your custom README template file in the `skills/` directory (e.g., `skills/custom-readme-template.md`).
+- The template should use Markdown and can include placeholders for project variables.
+- When you ask `@repo-manager generate a README using my template`, it will use your custom template.
+
+### 5. Starting the Environment and Container
+- If your project uses a development container:
+  - Make sure you have Docker installed and running.
+  - Open the Command Palette (`Ctrl+Shift+P`) and select **Dev Containers: Reopen in Container**.
+  - VS Code will build and start the container as defined in your `.devcontainer` folder.
+- The agent and skills will work inside the container as in your local environment.
