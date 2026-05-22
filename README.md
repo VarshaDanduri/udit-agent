@@ -9,9 +9,8 @@ A custom VS Code extension for automating workflows in VS Code via a chatbot sid
 - JSDoc and code documentation helpers
 
 ## Usage
-1. Download the six required extensions for VS Code.
-2. Run the chatbot by opening the Copilot Chat panel in VS Code.
-3. Use the `@repo-manager` command to interact with the agent and automate repo tasks.
+1. Run the chatbot by opening the Copilot Chat panel in VS Code.
+2. Use the `@repo-manager` command to interact with the agent and automate repo tasks.
 
 ### Available Commands
 - `@repo-manager create readmes for repos` — Generate README files for repositories
