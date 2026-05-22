@@ -76,3 +76,12 @@ You can ask things like:
   - Open the Command Palette (`Ctrl+Shift+P`) and select **Dev Containers: Reopen in Container**.
   - VS Code will build and start the container as defined in your `.devcontainer` folder.
 - The agent and skills will work inside the container as in your local environment.
+
+### 6. Editing or Creating the README Template
+- To create or edit the README template used by the agent, type `@repo-manager make template` in the Copilot Chat panel.
+- The agent will then create a `.agent/` folder in your repo (if it doesn't exist) and write the current template to `.agent/TEMPLATE.md`.
+- You can edit `.agent/TEMPLATE.md` to customize the README/runbook style for your project.
+- The agent will use your updated template for future README generation.
+- To revert to the default template, delete `.agent/TEMPLATE.md`.
+
+> **Note:** The `.agent` folder and template file are only created when you explicitly request it with `@repo-manager make template`. They are not present by default.
