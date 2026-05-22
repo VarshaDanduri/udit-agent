@@ -1,0 +1,34 @@
+{
+  "name": "udit-agent",
+  "displayName": "UDIT Agent",
+  "description": "VS Code agent for University of Delaware IT workflows. Includes only necessary skills.",
+  "version": "1.0.0",
+  "publisher": "udel-it",
+  "engines": {
+    "vscode": ">=1.70.0"
+  },
+  "categories": ["Other"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "udit-agent.openChatInfo",
+        "title": "UDIT Agent: Chatbot Info"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:udit-agent.openChatInfo"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "typescript": "^4.7.4",
+    "vsce": "^2.11.0"
+  },
+  "dependencies": {}
+}
