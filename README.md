@@ -9,13 +9,14 @@ A custom VS Code extension for automating workflows in VS Code via a chatbot sid
 - JSDoc and code documentation helpers
 
 ## Usage
-1. Clone this repository:
-   ```bash
-   git clone <repo-url>
-   cd udit-agent
-   ```
-2. Open in VS Code. The extension will activate automatically if loaded as a development extension.
-3. Use the Copilot Chat panel (side view) to interact with the agent and automate repo tasks.
+1. Run the chatbot by opening the Copilot Chat panel in VS Code.
+2. Use the `@repo-manager` command to interact with the agent and automate repo tasks.
+
+### Available Commands
+- `@repo-manager create readmes for repos` — Generate README files for repositories
+- `@repo-manager generate template` — Display and generate the template file used by the agent
+- `@repo-manager start container` — Start a development container
+- `@repo-manager help` — Get help with available commands
 
 ## Instructions
 udit-agent is a VS Code extension for automating workflows via a chatbot side view in VS Code.
@@ -59,16 +60,16 @@ Do not include personal credentials or environment secrets in this repository.
 - In the chat input, type `@repo-manager` to activate the repo manager skill.
 
 ### 3. Using @repo-manager
-You can ask things like:
-- `@repo-manager generate a README for this project`
-- `@repo-manager show me the git status`
-- `@repo-manager pull the latest changes`
-- `@repo-manager help`
+You can use commands like:
+- `@repo-manager create readmes for repos` — Generate README files for repositories
+- `@repo-manager generate template` — Generate and display the template file
+- `@repo-manager start container` — Start a development container
+- `@repo-manager help` — Get help with available commands
 
-### 4. Adding a Custom README Template
-- Place your custom README template file in the `skills/` directory (e.g., `skills/custom-readme-template.md`).
-- The template should use Markdown and can include placeholders for project variables.
-- When you ask `@repo-manager generate a README using my template`, it will use your custom template.
+### 4. Template Generation
+- The `@repo-manager generate template` command displays the template the agent uses and creates the template file.
+- If a custom template file exists in the `.repo-manager` directory of the repository, `@repo-manager` will use that template to create READMEs for repos in the current working directory (cwd).
+- To use a custom template, create a `.repo-manager` directory in your project root and place your template file there.
 
 ### 5. Starting the Environment and Container
 - If your project uses a development container:
